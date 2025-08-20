@@ -1,0 +1,138 @@
+
+venema:
+  type: book
+  id: venema
+  author: Gerard A. Venema
+  issued: 2011
+  title: Foundations of Geometry
+  language: en-US
+  edition: 2
+  publisher: Pearson
+  isbn: 978-0136020585
+
+
+costa:
+  type: book
+  id: costa
+  author:
+    - Antonio F. Costa
+    - Peter Buser
+  issued: 2010
+  title: Curso de geometría básica
+  language: es-ES
+  edition: 1
+  publisher: Sanz y Torres
+  isbn: 978-84-92948-34-5
+
+
+bracho:
+  type: book
+  id: bracho
+  author: Javier Bracho
+  issued: 2009
+  title: Introducción analítica a las geometrías
+  language: es-ES
+  edition: 1
+  publisher: Fondo de Cultura Económica
+  isbn: 978-607-16-0021-9
+
+
+
+  # \bibitem[Weissman]{weissman}
+  #   Martin H. Weissman.
+  #   \m{An Illustrated Theory of Numbers}
+  #   ---
+  #   formato: libro,
+  #   1.ra edición reimpresión,
+  #   editorial American Mathematical Society,
+  #   2020,
+  #   ISBN: 978-1470463717,
+  #   url: \url{http://illustratedtheoryofnumbers.com/}.
+  #
+  # \bibitem[Burton]{burton}
+  #   David M. Burton.
+  #   \m{Elementary Number Theory}
+  #   ---
+  #   formato: libro,
+  #   7.ma edición,
+  #   William C. Brown Pub.,
+  #   2010,
+  #   ISBN: 978-0077349905.
+  #
+  # \bibitem[theory-of-numbers-niven]{theory-of-numbers-niven}
+  #   Ivan Niven, Herbert S. Zuckerman y Hugh L. Montgomery.
+  #   \m{An Introduction to the Theory of Numbers}
+  #   ---
+  #   formato: libro,
+  #   5.ta edición,
+  #   editorial Wiley,
+  #   1991,
+  #   ISBN: 978-0471625469.
+  #
+  # \bibitem[comb-num-th-mileti]{comb-num-th-mileti}
+  #   Joseph R. Mileti.
+  #   \m{Combinatorics and Number Theory}
+  #   ---
+  #   formato: apuntes,
+  #   2022,
+  #   \url{https://mileti.math.grinnell.edu/ComboNumber.pdf}.
+  #
+  # \bibitem[Leighton]{leighton}
+  #   Eric Lehman, F. Thomson Leighton y Albert R. Meyer.
+  #   \m{Mathematics for Computer Science}
+  #   ---
+  #   formato: apuntes,
+  #   2018,
+  #   \url{https://courses.csail.mit.edu/6.042/spring18/mcs.pdf}.
+  #
+  # \bibitem[Brualdi]{brualdi}
+  #   \eng{Richard A.~Brualdi}.
+  #   \m{\eng{Introductory Combinatorics}}
+  #   ---
+  #   formato: libro,
+  #   5.ta edición,
+  #   editorial Pearson India,
+  #   2019,
+  #   ISDN: 978-9353433062.
+  #
+  # \bibitem[Chuan-Chong]{chuan-chong}
+  #   Chen Chuan-Chong y Koh Khee-Meng.
+  #   \m{Principles and Techniques in Combinatorics}
+  #   ---
+  #   formato: libro,
+  #   1.ra edición,
+  #   World Scientific Publishing,
+  #   1992,
+  #   ISBN: 978-9810211394.
+  #
+  # \bibitem[proofs-cummings]{proofs-cummings}
+  #   \eng{Jay Cummings}.
+  #   \m{\eng{Proofs. A Long-Form Mathematics Textbook}}
+  #   ---
+  #   publicación independiente,
+  #   2021,
+  #   ISBN: 979-8595265973.
+  #
+  # \bibitem[idescent-newstead]{idescent-newstead}
+  #   \eng{Clive Newstead}.
+  #   \m{\eng{An Infinite Descent into Pure Mathematics}}
+  #   ---
+  #   publicación independiente,
+  #   2024,
+  #   ISBN: 978-1-950215-01-0.
+  #
+  # \bibitem[stillwell-elem-maths]{stillwell-elem-maths}
+  #   \eng{Clive Newstead}.
+  #   \m{\eng{An Infinite Descent into Pure Mathematics}}
+  #   ---
+  #   publicación independiente,
+  #   2024,
+  #   ISBN: 978-1-950215-01-0.
+  #
+
+
+
+
+
+
+

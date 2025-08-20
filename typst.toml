@@ -1,0 +1,21 @@
+
+
+
+[package]
+name = "ctafur-maths-template"
+version = "0.1.0"
+entrypoint = "src/main.typ"
+authors = ["Carlos E. Tafur Egido"]
+license = "MIT"
+description = "Template for note taking maths."
+
+
+
+[template]
+path = "."
+entrypoint = "src/main.typ"
+# thumbnail = "thumbnail.png"
+
+
+
+

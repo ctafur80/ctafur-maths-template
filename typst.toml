@@ -2,7 +2,7 @@
 
 
 [package]
-name = "ctafur-maths-template"
+name = "ctafur-notes"
 version = "0.1.0"
 entrypoint = "src/main.typ"
 authors = ["Carlos E. Tafur Egido"]

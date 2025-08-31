@@ -90,12 +90,18 @@
   set text(
     font: "Noto Sans",
     size: 8pt,
+    weight: 300,
     tracking: 0.3pt,
     // font: "New Computer Modern",
     // tracking: 0.2pt,
     // size: 10pt,
     fill: palette.fg,
   )
+
+  show strong: set text(weight: 200)
+
+  show heading: set text(weight: 400)
+
 
   // Maybe font: "Noto Sans Math" in the future.
   show math.equation: set text(size: 9pt)
@@ -129,6 +135,8 @@
 
   // set heading(numbering: "1.")
 
+  let hrule = line(length: 100%)
+
 
 
   // Enumerates automatically the non-referenced equations.
@@ -141,6 +149,8 @@
         it
       }
   }
+
+  // show math.text: set text(font: "Noto Sans", weight: 300, size: 7pt)
 
 
   /*
@@ -218,7 +228,7 @@
 #let proposition(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -227,7 +237,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Proposición#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Proposición#display_number#display_title.]
     #body
   ]
 }
@@ -238,7 +248,7 @@
 #let theorem(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -247,7 +257,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Teorema#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Teorema#display_number#display_title.]
     #body
   ]
 }
@@ -259,7 +269,7 @@
 #let axiom(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -268,7 +278,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Axioma#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Axioma#display_number#display_title.]
     #body
   ]
 }
@@ -285,7 +295,7 @@
   }
 
   let number = context counter("euclid").display()
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -294,7 +304,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Axioma P#number de Euclides#the_title.]
+    #text(weight: 500, style: "italic")[Axioma P#number de Euclides#the_title.]
     #text[#it]
   ]
 }
@@ -306,7 +316,7 @@
 #let definition(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -315,7 +325,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Definición#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Definición#display_number#display_title.]
     #body
   ]
 }
@@ -327,7 +337,7 @@
 #let lemma(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -336,7 +346,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Lema#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Lema#display_number#display_title.]
     #body
   ]
 }
@@ -348,7 +358,7 @@
 #let corollary(body, number: none, title: none) = {
   let display_number = if number != none { " " + number } else { "" }
   let display_title = if title != none { " (" + title + ")" } else { "" }
-  set enum(numbering: "(i)")
+  set enum(numbering: "i.")
 
   block(
     // breakable: false,
@@ -357,7 +367,7 @@
     inset: 8pt,
     radius: 4pt,
   )[
-    #text(weight: "bold", style: "italic")[Corolario#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Corolario#display_number#display_title.]
     #body
   ]
 }
@@ -371,7 +381,7 @@
   let display_title = if title != none { " (" + title + ")" } else { "" }
 
   block[
-    #text(weight: "bold", style: "italic")[Ejemplo#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Ejemplo#display_number#display_title.]
     #body
     #h(1fr)
     $triangle.filled.br$
@@ -387,7 +397,7 @@
   let display_title = if title != none { " (" + title + ")" } else { "" }
 
   block[
-    #text(weight: "bold", style: "italic")[Ejercicio#display_number#display_title.]
+    #text(weight: 500, style: "italic")[Ejercicio#display_number#display_title.]
     #body
     #h(1fr)
     $triangle.filled.br$

@@ -1,7 +1,5 @@
 
-
-#import "../typst-maths-notes-template/main-template.typ": *
-
+#import "../template.typ": *
 
 
 

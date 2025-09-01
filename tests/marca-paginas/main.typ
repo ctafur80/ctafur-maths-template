@@ -1,6 +1,6 @@
 
 
-#import "./main-template.typ": *
+#import "template.typ": *
 
 
 
@@ -60,18 +60,18 @@
 
 
 = Introducción
-#include("fuentes/introduccion.typ")
+#include("src/introduccion.typ")
 
 
 = Capítulo 1. Espacios métricos
 <ch-espacios-metricos>
-#include("fuentes/espacios-metricos.typ")
+#include("src/espacios-metricos.typ")
 
 
 
 = Capítulo 2. Axiomas del plano euclideo
 <ch-axiomas-plano-euclideo>
-#include("fuentes/ax-plano-euclideo.typ")
+#include("src/ax-plano-euclideo.typ")
 
 
 
@@ -79,7 +79,7 @@
 
 
 // #set par(justify: false)
-#bibliography("./bibliografia.yml", style: "chicago-author-date")
+#bibliography("referencias.yaml", style: "ieee")
 
 
 

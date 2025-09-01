@@ -1,5 +1,5 @@
 
-#import "../main-template.typ": *
+#import "../template.typ": *
 
 
 

@@ -99,8 +99,12 @@
   )
 
   show strong: set text(weight: 200)
-
   show heading: set text(weight: 400)
+
+  show heading.where(level: 1): set text(size: 14pt)
+  show heading.where(level: 2): set text(size: 14pt)
+  show heading.where(level: 3): set text(size: 10pt)
+  show heading.where(level: 4): set text(size: 8pt)
 
 
   // Maybe font: "Noto Sans Math" in the future.
@@ -117,10 +121,16 @@
 
 
   show raw: set text(
-    font: "JetBrains Mono",
-    // font: "JetBrainsMonoNL NF",
-    size: 9pt,
+    font: "JetBrains Mono", // font: "JetBrainsMonoNL NF",
+    size: 7pt,
     )
+
+  show raw.where(block: true): block.with(
+    fill: luma(40),
+    inset: 10pt,
+    radius: 4pt,
+    width: 100%,
+  )
 
 
   show figure.caption: set text(style: "italic")
@@ -135,11 +145,10 @@
 
   // set heading(numbering: "1.")
 
-  let hrule = line(length: 100%)
 
 
 
-  // Enumerates automatically the non-referenced equations.
+  // Enumerates automatically the labeled non-referenced equations.
   set math.equation(numbering: "(1)")
   show math.equation: it => {
       if it.block and not it.has("label") [
@@ -170,9 +179,13 @@
   // show "lim": name => { "lím" }
 
 
+  // TODO Sigue mal. La centra.
+  show bibliography: set heading(level: 2)
 
+
+  // Title page
   set align(center+horizon)
-  text(weight: "bold", size: 17pt, title)
+  text(weight: 400, size: 17pt, title)
 
   let count = authors.len()
   let ncols = calc.min(count, 3)
@@ -183,30 +196,60 @@
   )
 
   par(justify: false)[
-    *Abstract* \ 
+    *Abstract* \
     #abstract
   ]
 
 
+
+  // Table of contents
   pagebreak()
   set align(left+top)
 
-  outline()
+
+  // show outline.entry.where(level: 1): it => {
+  //   set text(it, size: 36pt)
+  // }
+  v(3cm)
+  outline(depth: 4)
 
 
-  // TODO Assign footnote top border depending on dark_theme value.
-  // set footnote(stroke: red)
+
+  set footnote.entry(separator: line(length: 30% + 0pt, stroke: (thickness:
+    0.5pt, paint: palette.fg)))
 
 
 
-  // Makes a page break before every chapter (depth-1 heading).
+  // Makes a page break before every depth-1 heading.
   show outline: set heading(supplement: [Outline])
   show heading.where(depth: 1): it => {
     if it.supplement != [Outline] {
       pagebreak(weak: true)
     }
-    it
+    align(center+horizon)[#it]
+    pagebreak(weak: false)
+    v(3cm)
   }
+
+
+  show heading.where(depth: 2): it => {
+    if it.supplement != [Outline] {
+      pagebreak(weak: true)
+    }
+    v(2cm)
+    it
+    v(1em)
+  }
+
+  show heading.where(depth: 3): it => {
+    if it.supplement != [Outline] {
+      pagebreak(weak: true)
+    }
+    v(1.5em)
+    it
+    v(0.7em)
+  }
+
 
 
 
@@ -216,10 +259,15 @@
 }
 
 
+#let hrule = block[
+  #v(15pt)
+  #line(length: 100%, stroke: (paint: palette.fg, thickness: 0.5pt, dash: "dashed"))
+  #v(15pt)
+]
 
 
 
-// Maths. TODO Try to put this in a separate file.
+// Maths Environments. TODO Try to put this in a separate file.
 // ----------------------------------------------------------------------------------------
 
 
